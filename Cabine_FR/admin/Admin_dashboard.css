@@ -1,0 +1,101 @@
+:root {
+  --primary: #059669;
+  --primary-light: #ecfdf5;
+  --primary-dark: #047857;
+  --accent-green: #10b981;
+  --accent-green-light: #ecfdf5;
+}
+
+body {
+  background: linear-gradient(135deg, #f0fdf4 0%, #f8fafc 42%, #ecfdf5 100%);
+}
+
+.admin-app .logo-icon,
+.admin-app .sidebar-nav li.active a,
+.admin-app .welcome-date,
+.admin-app .btn-outline-small:hover,
+.admin-app .btn-add:hover {
+  background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+}
+
+.admin-app .sidebar-nav li.active a {
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.22);
+}
+
+.admin-app .sidebar-nav a:hover,
+.admin-app .btn-link,
+.admin-app .welcome-text .highlight,
+.admin-app .icon-btn:hover {
+  color: var(--primary);
+}
+
+.admin-app .icon-btn:hover {
+  background-color: var(--primary-light);
+}
+
+.admin-app .search-bar:focus-within {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.12);
+}
+
+.admin-welcome {
+  background: linear-gradient(135deg, #ffffff 0%, #ecfdf5 100%);
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
+.page-kicker {
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.admin-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-weight: 800;
+}
+
+.admin-metrics {
+  display: grid;
+  gap: 14px;
+}
+
+.metric-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.metric-row span {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.metric-row strong {
+  color: var(--primary);
+  font-size: 22px;
+}
+
+.empty-table {
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.doctor-list-item {
+  align-items: flex-start;
+}
+
+@media (max-width: 576px) {
+  .admin-app .header-right {
+    gap: 10px;
+  }
+}

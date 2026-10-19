@@ -1,0 +1,208 @@
+/* ===== Doctors Table ===== */
+.doctors-table-wrap {
+  background: var(--white);
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(44, 62, 80, 0.08);
+  overflow: hidden;
+  border: 1px solid rgba(44, 62, 80, 0.05);
+}
+
+.doctors-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.doctors-table thead th {
+  background: var(--primary-blue);
+  color: var(--white);
+  font-weight: 700;
+  text-align: left;
+  padding: 14px 16px;
+  font-size: 0.95rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  letter-spacing: 0.3px;
+}
+
+.doctors-table tbody td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(44, 62, 80, 0.06);
+  vertical-align: middle;
+  color: var(--text-dark);
+  background: var(--white);
+}
+
+.doctors-table tbody tr:hover td {
+  background: rgba(74, 144, 226, 0.05);
+  transition: background 0.2s ease;
+}
+
+/* Doctor cell */
+.doc-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.doc-avatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(74, 144, 226, 0.15);
+  flex: 0 0 auto;
+  background: #f2f7ff;
+}
+
+.doc-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.doc-name {
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: 0.2px;
+}
+
+/* Specialty */
+.td-specialty {
+  font-weight: 700;
+  color: var(--primary-blue);
+}
+
+.spec-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(74, 144, 226, 0.1);
+  color: var(--primary-blue);
+  border: 1px solid rgba(74, 144, 226, 0.18);
+  gap: 6px;
+  line-height: 1;
+}
+
+/* Experience & Location */
+.td-exp,
+.td-loc {
+  font-weight: 700;
+  color: #22313f;
+}
+
+/* Rating pill */
+.rating-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(44, 62, 80, 0.08);
+  background: #f8fbff;
+  font-weight: 700;
+  white-space: nowrap;
+  box-shadow: none;
+}
+
+.rating-pill i {
+  color: var(--medical-green);
+}
+
+.rating-pill .rv {
+  color: var(--primary-blue);
+}
+.rating-pill .rm,
+.rating-pill .rc {
+  color: var(--soft-grey);
+  font-weight: 600;
+}
+
+.rating-pill.no-rating {
+  background: var(--light-grey);
+  color: var(--soft-grey);
+  border-color: rgba(44, 62, 80, 0.05);
+  box-shadow: none;
+}
+
+/* Action button */
+.td-action {
+  width: 180px;
+}
+
+.btn-book {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 800;
+  background: linear-gradient(135deg, #2f6dac, #3a8edb);
+  transition: 0.25s ease;
+  letter-spacing: 0.2px;
+}
+
+.btn-book:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(47, 109, 172, 0.35);
+}
+
+/* ===== Responsive: table -> cards (mobile friendly) ===== */
+@media (max-width: 900px) {
+  .doctors-table thead {
+    display: none;
+  }
+
+  .doctors-table,
+  .doctors-table tbody,
+  .doctors-table tr,
+  .doctors-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .doctors-table tbody tr {
+    border-bottom: 1px solid rgba(44, 62, 80, 0.08);
+    padding: 12px 12px;
+  }
+
+  .doctors-table tbody td {
+    border: none;
+    padding: 10px 12px;
+    background: transparent;
+  }
+
+  .doctors-table tbody td::before {
+    content: attr(data-label);
+    display: block;
+    font-weight: 800;
+    color: var(--soft-grey);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    letter-spacing: 0.4px;
+  }
+
+  .td-action {
+    width: 100%;
+  }
+  .btn-book {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .doc-cell {
+    justify-content: center;
+  }
+  .doctors-table tbody td {
+    text-align: center;
+  }
+}
+

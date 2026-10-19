@@ -1,0 +1,377 @@
+/* Doctor Profile Page Styles */
+
+.doctor-profile-section {
+    padding: 60px 0 80px;
+    background: var(--light-grey);
+    min-height: calc(100vh - 200px);
+}
+
+.doctor-profile-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Doctor Header */
+.doctor-header {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px var(--shadow);
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.doctor-image-large {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--medical-green));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.3);
+}
+
+.doctor-image-large i {
+    font-size: 5rem;
+    color: var(--white);
+}
+
+.doctor-info-header h1 {
+    color: var(--text-dark);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.doctor-specialty-large {
+    color: var(--primary-blue);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.doctor-badges {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.badge {
+    background: var(--light-grey);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.badge i {
+    color: var(--primary-blue);
+}
+
+/* Tabs */
+.doctor-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--light-grey);
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--soft-grey);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    top: 2px;
+}
+
+.tab-btn:hover {
+    color: var(--primary-blue);
+}
+
+.tab-btn.active {
+    color: var(--primary-blue);
+    border-bottom-color: var(--primary-blue);
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.content-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--shadow);
+    margin-bottom: 2rem;
+}
+
+.content-card h2 {
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.content-card h3 {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.content-card p {
+    color: var(--soft-grey);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+/* Specialization List */
+.specialization-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.specialization-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-dark);
+    padding: 0.75rem;
+    background: var(--light-grey);
+    border-radius: 8px;
+}
+
+.specialization-list i {
+    color: var(--medical-green);
+}
+
+/* Education Items */
+.education-item {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.education-item:last-child {
+    border-bottom: none;
+}
+
+.education-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.education-icon i {
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.education-details h3 {
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.institution {
+    color: var(--primary-blue);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.year {
+    color: var(--soft-grey);
+    font-size: 0.9rem;
+}
+
+/* Experience Items */
+.experience-item {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+.experience-year {
+    color: var(--primary-blue);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.experience-details h3 {
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.experience-details .institution {
+    color: var(--primary-blue);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.experience-details p {
+    color: var(--soft-grey);
+    line-height: 1.8;
+}
+
+/* Reviews */
+.reviews-summary {
+    background: var(--light-grey);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.rating-overview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.rating-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-blue);
+}
+
+.rating-stars {
+    color: #FFD700;
+    font-size: 1.5rem;
+}
+
+.rating-overview p {
+    color: var(--soft-grey);
+    margin: 0;
+}
+
+.review-item {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.review-item:last-child {
+    border-bottom: none;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.reviewer-info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.reviewer-avatar {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}
+
+.reviewer-info h4 {
+    color: var(--text-dark);
+    margin-bottom: 0.25rem;
+}
+
+.review-rating {
+    color: #FFD700;
+    font-size: 0.9rem;
+}
+
+.review-date {
+    color: var(--soft-grey);
+    font-size: 0.9rem;
+}
+
+.review-text {
+    color: var(--text-dark);
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .doctor-header {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .doctor-image-large {
+        margin: 0 auto;
+    }
+
+    .doctor-info-header h1 {
+        font-size: 2rem;
+    }
+
+    .doctor-tabs {
+        flex-wrap: wrap;
+        overflow-x: auto;
+    }
+
+    .tab-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .content-card {
+        padding: 1.5rem;
+    }
+
+    .education-item,
+    .experience-item {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .experience-year {
+        margin-bottom: 0.5rem;
+    }
+
+    .specialization-list {
+        grid-template-columns: 1fr;
+    }
+}
+
